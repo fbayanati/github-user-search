@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/user-search",
         "index": "apps/user-search/src/index.html",
@@ -30,8 +28,8 @@
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "2mb",
+              "maximumError": "2mb"
             },
             {
               "type": "anyComponentStyle",
@@ -87,9 +85,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/user-search"
-      ],
+      "outputs": ["coverage/apps/user-search"],
       "options": {
         "jestConfig": "apps/user-search/jest.config.ts",
         "passWithNoTests": true
