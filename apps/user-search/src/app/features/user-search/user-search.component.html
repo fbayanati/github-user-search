@@ -1,0 +1,26 @@
+<div class="gus-search-form-container">
+  <form
+    class="gus-search-form"
+    [formGroup]="searchForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <mat-form-field class="gus-search-field" appearance="outline">
+      <mat-label>Search GitHub Users</mat-label>
+      <input
+        matInput
+        placeholder="GitHub user"
+        formControlName="user"
+        value=""
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      class="gus-search-submit"
+      color="primary"
+      type="submit"
+    >
+      <mat-icon>search</mat-icon>
+      <span>Search</span>
+    </button>
+  </form>
+</div>

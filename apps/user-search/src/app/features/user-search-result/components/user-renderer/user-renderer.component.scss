@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  align-items: center;
+
+  .gus-user {
+    &-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-basics {
+      display: flex;
+    }
+
+    &-avator {
+      margin: 0.1rem 1rem;
+    }
+
+    &-login {
+      font-size: 2rem;
+    }
+  }
+}

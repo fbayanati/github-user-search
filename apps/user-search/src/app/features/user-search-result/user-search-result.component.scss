@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  max-width: 140rem;
+
+  .gus-user-search-result-container {
+    overflow: hidden;
+    flex-grow: 1;
+    height: 100%;
+    margin: 0 10rem;
+
+    .gus-pagination {
+      display: flex;
+      justify-content: space-between;
+
+      &-back {
+        margin-left: 1.6rem;
+
+        &-label {
+          font-size: 1.6rem;
+          margin: 0 1.6rem;
+        }
+      }
+
+      &-pages {
+        margin: 0 2rem;
+      }
+
+      &-total-records {
+        display: flex;
+        justify-items: flex-end;
+        justify-items: center;
+        margin-right: 1.6rem;
+
+        &-label {
+          font-size: 1.6rem;
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<div class="gus-user-search-result-container">
+  <div class="gus-pagination">
+    <div class="gus-pagination-back">
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Back to search"
+        (click)="onBackToSearch()"
+      >
+        <mat-icon>arrow_back</mat-icon>
+        <span class="gus-pagination-back-label">Back to user search</span>
+      </button>
+    </div>
+
+    <div class="gus-pagination-container">
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="First page"
+        [disabled]="isFirstPageDisabled"
+        (click)="onFirstPage()"
+      >
+        <mat-icon>first_page</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Previous page"
+        [disabled]="isPreviousPageDisabled"
+        (click)="onPreviousPage()"
+      >
+        <mat-icon>navigate_before</mat-icon>
+      </button>
+      <span class="gus-pagination-pages"
+        >Page {{ searchPage }} of {{ searchedUsersTotalPages$ | async }}</span
+      >
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Next page"
+        [disabled]="isNextPageDisabled"
+        (click)="onNextPage()"
+      >
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Last page"
+        [disabled]="isLastPageDisabled"
+        (click)="onLastPage()"
+      >
+        <mat-icon>last_page</mat-icon>
+      </button>
+    </div>
+
+    <div class="gus-pagination-total-records">
+      <div class="gus-pagination-total-records-label">
+        Total count: {{ searchedUsersTotalCount$ | async }}
+      </div>
+    </div>
+  </div>
+
+  <ag-grid-angular
+    style="width: 100%; height: 100%"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowHeight]="rowHeight"
+    [rowData]="searchedUsers$ | async"
+    [animateRows]="true"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
+</div>

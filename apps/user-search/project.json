@@ -1,11 +1,13 @@
 {
   "projectType": "application",
   "sourceRoot": "apps/user-search/src",
-  "prefix": "search",
+  "prefix": "gus",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/user-search",
         "index": "apps/user-search/src/index.html",
@@ -17,7 +19,10 @@
           "apps/user-search/src/favicon.ico",
           "apps/user-search/src/assets"
         ],
-        "styles": ["apps/user-search/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/user-search/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -82,7 +87,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/user-search"],
+      "outputs": [
+        "coverage/apps/user-search"
+      ],
       "options": {
         "jestConfig": "apps/user-search/jest.config.ts",
         "passWithNoTests": true

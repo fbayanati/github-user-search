@@ -1,0 +1,20 @@
+<div class="gus-user-container">
+  <div class="gus-user-basics">
+    <img
+      class="gus-user-avator"
+      [src]="user?.avatar_url"
+      width="40"
+      height="40"
+      [alt]="user?.login"
+    />
+    <button
+      mat-icon-button
+      aria-label="Open git url in new tab"
+      color="primary"
+      (click)="onHomeClick()"
+    >
+      <mat-icon>home</mat-icon>
+    </button>
+    <span class="gus-user-login">{{ user?.login }}</span>
+  </div>
+</div>

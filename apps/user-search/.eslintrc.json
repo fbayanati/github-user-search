@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "search",
+            "prefix": "gus",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "search",
+            "prefix": "gus",
             "style": "kebab-case"
           }
         ]

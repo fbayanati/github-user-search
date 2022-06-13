@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+
+.gus-search {
+  &-form-container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-form {
+    display: flex;
+  }
+
+  &-field {
+    min-width: 80rem;
+  }
+
+  &-submit {
+    margin: 0.35rem 0 0 1rem;
+    min-width: 16rem;
+    height: 6rem;
+  }
+}
+
+.mat-raised-button {
+  font-size: 1.6rem;
+}

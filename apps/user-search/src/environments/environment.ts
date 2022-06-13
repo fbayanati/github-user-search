@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  api: {
+    usersSearch: 'https://api.github.com/search/users',
+  },
 };
 
 /*
